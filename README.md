@@ -14,7 +14,7 @@ FOLDER FYP
  
  -subfolder smartRfidkamsis
  
- -fypkamsisnew.rar
+ -subfolder fypkamsisnew
  
  
    LAPORAN - izzah
@@ -36,7 +36,7 @@ FOLDER FYP
  ARDUINO 
  (subfolder ARDUINO )
  
- - arduino.rar
+ -  subfolder arduino
  
  
 OBJEKTIF YANG TELAH DICAPAI

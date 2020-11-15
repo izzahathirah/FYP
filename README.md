@@ -16,6 +16,8 @@ FOLDER FYP
  
  -subfolder fypkamsisnew
  
+ -subfolder fypkamsisnew(1) 
+ 
  
    LAPORAN - izzah
    
@@ -33,10 +35,13 @@ FOLDER FYP
  
  -demo 2 slide
  
+ - REPORT FINAL (UNTUK SEMAKKAN)
+ 
  ARDUINO 
  (subfolder ARDUINO )
  
- -  subfolder arduino
+ -  subfolder 
+ arduino
  
  
 OBJEKTIF YANG TELAH DICAPAI

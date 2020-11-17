@@ -1,4 +1,7 @@
-
+<style>
+body{
+background-color:#EAE7DC;}
+</style>
 
 
 
@@ -21,10 +24,10 @@ $uid=$_SESSION['login'];
 	   while($row=$res->fetch_object())
 	  {
 	  	?>
-				<a href="#"><img src="img/stud.png" class="ts-avatar hidden-side" alt=""> <?php echo $row->regNo;?> <i class="fa fa-angle-down hidden-side"></i></a>
+				<a href="#"><i class="fa fa-user "></i>&nbsp;&nbsp;&nbsp;<?php echo $row->regNo;?> <i class="fa fa-angle-down hidden-side"></i></a>
 							<?php } ?>
 				<ul>
-					<li><a href="my-profile.php">My Account</a></li>
+					<li><a href="my-profile.php"><i class="fas fa-id-card"></i>My Account</a></li>
 					<li><a href="logout.php">Logout</a></li>
 				</ul>
 			</li>
@@ -33,8 +36,8 @@ $uid=$_SESSION['login'];
 
 <?php
 } else { ?>
-<div class="brand clearfix">
-		<a href="#" class="logo" style="font-size:16px;">Kamsis Management System</a>
+<div class="brand clearfix" style="background-color:#116466">
+		<a href="#" class="logo" style="font-size:16px; color:#D1E8E2;   font-weight: bold;">Kamsis Management System</a>
 		<span class="menu-btn"><i class="fa fa-bars"></i></span>
 		
 	</div>

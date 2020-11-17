@@ -85,7 +85,7 @@ while($row=$res->fetch_object())
 
 <tr>
 <td><b>Room no :</b></td>
-<td><?php echo $row->roomno;?></td>
+<td><?php echo $row->blok;?>-<?php echo $row->aras;?>-<?php echo $row->roomno;?></td>
 <td><b>Wardrobe:</b></td>
 <td><?php echo $row->almari;?></td>
 <td><b>Table :</b></td>
@@ -93,8 +93,8 @@ while($row=$res->fetch_object())
 </tr>
 
 <tr>
-<td><b>Duration:</b></td>
-<td><?php echo $dr=$row->duration;?> Months</td>
+<td><b>Contact.no:</b></td>
+<td><?php echo $row->contactno;?></td>
 <td><b>Chair:</b></td>
 <td><?php echo $row->kerusi;?>
 </td>
@@ -105,70 +105,12 @@ while($row=$res->fetch_object())
 
 <tr>
 <td><b>Stay From :</b></td>
-<td><?php echo $row->stayfrom;?></td>
+<td><?php echo $row->postingDate;?></td>
 
 <th>KeyTag:</th>
 <td colspan="3"><?php echo $row->keytag;?></td>
 </tr>
 
-<tr>
-<td colspan="6" style="color:red"><h4>Personal Info</h4></td>
-</tr>
-
-<tr>
-<td><b>Reg No. :</b></td>
-<td><?php echo $row->regno;?></td>
-<td><b>Full Name :</b></td>
-<td><?php echo $row->firstName;?><?php echo $row->lastName;?></td>
-<td><b>Email :</b></td>
-<td><?php echo $row->emailid;?></td>
-</tr>
-
-
-<tr>
-<td><b>Contact No. :</b></td>
-<td><?php echo $row->contactno;?></td>
-<td><b>Gender :</b></td>
-<td><?php echo $row->gender;?></td>
-<td><b>Department :</b></td>
-<td><?php echo $row->course;?></td>
-</tr>
-
-
-<tr>
-<td><b>Emergency Contact No. :</b></td>
-<td><?php echo $row->egycontactno;?></td>
-<td><b>Guardian Name :</b></td>
-<td><?php echo $row->guardianName;?></td>
-<td><b>Guardian Relation :</b></td>
-<td><?php echo $row->guardianRelation;?></td>
-</tr>
-
-<tr>
-<td><b>Guardian Contact No. :</b></td>
-<td colspan="6"><?php echo $row->guardianContactno;?></td>
-</tr>
-
-<tr>
-<td colspan="6" style="color:blue"><h4>Addresses</h4></td>
-</tr>
-<tr>
-<td><b>Correspondense Address</b></td>
-<td colspan="2">
-<?php echo $row->corresAddress;?><br />
-<?php echo $row->corresCIty;?>, <?php echo $row->corresPincode;?><br />
-<?php echo $row->corresState;?>
-
-
-</td>
-<td><b>Permanent Address</b></td>
-<td colspan="2">
-<?php echo $row->pmntAddress;?><br />
-<?php echo $row->pmntCity;?>, <?php echo $row->pmntPincode;?><br />
-<?php echo $row->pmnatetState;?>	
-
-</td>
-</tr>
 
 
 <?php

@@ -1,5 +1,5 @@
-<div class="brand clearfix">
-		<a href="#" class="logo" style="font-size:16px;">Kamsis Management System</a>
+<div class="brand clearfix" style=" background-color:#116466">
+		<a href="#" class="logo" style="font-size:16px; color:#D1E8E2;   font-weight: bold;">Kamsis Management System</a>
 		<span class="menu-btn"><i class="fa fa-bars"></i></span>
 		<ul class="ts-profile-nav">
 			<li class="ts-account">

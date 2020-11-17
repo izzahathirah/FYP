@@ -41,7 +41,7 @@ echo"<script>alert('Student Succssfully register');</script>";
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
-	<title>User Registration</title>
+	<title>Student Registration</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">>
@@ -76,7 +76,7 @@ return true;
 				<div class="row">
 					<div class="col-md-12">
 					
-						<h2 class="page-title">Student Registration </h2>
+						<h2 class="page-title" style="color: #2F2FA2; font-weight: bold;">Student Registration </h2>
 
 						<div class="row">
 							<div class="col-md-12">
@@ -88,8 +88,8 @@ return true;
 										
 
 <div class="form-group">
-<label class="col-sm-2 control-label"> Registration No : </label>
-<div class="col-sm-8">
+<label class="col-sm-3 control-label"> Registration No : </label>
+<div class="col-sm-6">
 <input type="text" name="regno" id="regno"  class="form-control" required="required" onBlur="checkRegnoAvailability()">
 <span id="user-reg-availability" style="font-size:12px;"></span>
 </div>
@@ -99,24 +99,24 @@ return true;
 
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Email id: </label>
-<div class="col-sm-8">
+<label class="col-sm-3 control-label">Email id: </label>
+<div class="col-sm-6">
 <input type="email" name="email" id="email"  class="form-control" onBlur="checkAvailability()" required="required">
 <span id="user-availability-status" style="font-size:12px;"></span>
 </div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Password: </label>
-<div class="col-sm-8">
+<label class="col-sm-3 control-label">Password: </label>
+<div class="col-sm-6">
 <input type="password" name="password" id="password"  class="form-control" required="required">
 </div>
 </div>
 
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Confirm Password : </label>
-<div class="col-sm-8">
+<label class="col-sm-3 control-label">Confirm Password : </label>
+<div class="col-sm-6">
 <input type="password" name="cpassword" id="cpassword"  class="form-control" required="required">
 </div>
 </div>
@@ -124,7 +124,7 @@ return true;
 
 
 
-<div class="col-sm-6 col-sm-offset-4">
+<div class="col-sm-6 col-sm-offset-5">
 <button class="btn btn-default" type="reset">Reset</button>
 <input type="submit" name="submit" Value="Register" class="btn btn-primary">
 </div>

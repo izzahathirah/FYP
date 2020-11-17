@@ -74,26 +74,23 @@ $aid=$_SESSION['id'];
 									</tfoot>
 									<tbody>
 <?php	
-
-$ret="select * from userlogkey ";
-$stmt= $mysqli->prepare($ret) ;
-
-$stmt->execute() ;
-$res=$stmt->get_result();
-$cnt=1;
-while($row=$res->fetch_object())
+$ret = "SELECT * FROM logkey INNER JOIN registration ON logkey.CardNumber = registration.CardID "; 
+	 //$ret = "SELECT * FROM users INNER JOIN rooms ON users.CardID = rooms.CardID ";  
+	$stmt= $mysqli->prepare($ret) ;
+	 $stmt->execute() ;//ok
+	 $res=$stmt->get_result();
+	 $cnt=1;
+	   while($row=$res->fetch_object())
 	  {
 	  	?>
 <tr><td><?php echo $cnt;;?></td>
 
 
-<td><?php echo $row->Date;?></td>
-<td><?php echo $row->Time;?></td>
+<td><?php echo $row->DateLog;?></td>
+<td><?php echo $row->TimeIn;?></td>
 
 										</tr>
-									<?php
-$cnt=$cnt+1;
-									 } ?>
+									<?php  $cnt=$cnt+1;} ?>
 											
 										
 									</tbody>

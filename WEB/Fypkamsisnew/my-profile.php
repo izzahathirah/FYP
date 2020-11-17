@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('includes/config.php');
-date_default_timezone_set('Asia/KualaLumpur');
+date_default_timezone_set('Asia/Kuala_Lumpur');
 include('includes/checklogin.php');
 check_login();
 $aid=$_SESSION['id'];
@@ -65,14 +65,14 @@ $udate = date('d-m-Y h:i:s', time());
 	  	?>	
 				<div class="row">
 					<div class="col-md-12">
-						<h2 class="page-title"><?php echo $row->firstName;?>'s&nbsp;Profile </h2>
+						<h2 class="page-title"><?php echo $row->firstName;?>&nbsp;<?php echo $row->lastName;?>'s&nbsp;Profile </h2>
 
 						<div class="row">
 							<div class="col-md-12">
 								<div class="panel panel-primary">
-									<div class="panel-heading">
+									<div class="panel-heading" >
 
-Last Updation date : &nbsp; <?php echo $row->updationDate;?> 
+<h6>Last Updation date :&nbsp;&nbsp;&nbsp; <?php echo $row->updationDate;?> </h6>
 </div>
 									
 
@@ -196,5 +196,10 @@ error:function (){}
 });
 }
 </script>
-
+<script>
+	var blink = document.getElementById('blink');
+			setInterval(function() {
+				blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+			}, 750); 
+			</script>
 </html>

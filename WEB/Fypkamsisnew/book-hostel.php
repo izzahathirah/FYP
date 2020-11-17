@@ -20,7 +20,8 @@ check_login();
 if(isset($_POST['submit']))
 {
 $roomno=$_POST['roomno'];
-
+$blok=$_POST['blok'];
+$aras=$_POST['aras'];
 $meja=$_POST['meja'];
 $katil=$_POST['katil'];
 $almari=$_POST['almari'];
@@ -28,10 +29,14 @@ $kerusi=$_POST['kerusi'];
 $keytag=$_POST['keytag'];
 $stayfrom=$_POST['stayf'];
 $emailid=$_POST['emailid'];
+$fname=$_POST['fname'];
+$lname=$_POST['lname'];
+$regno=$_POST['regno'];
+$contactno=$_POST['contactno'];
 
-$query="insert into  registration(roomno,meja,katil,almari,kerusi,keytag,stayfrom,duration,course,regno,firstName,lastName,gender,contactno,emailid,egycontactno,guardianName,guardianRelation,guardianContactno,corresAddress,corresCIty,corresState,corresPincode,pmntAddress,pmntCity,pmnatetState,pmntPincode) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+$query="insert into registration(roomno,blok,aras,meja,katil,almari,kerusi,keytag,stayfrom,duration,course,regno,firstName,lastName,gender,contactno,emailid,egycontactno,guardianName,guardianRelation,guardianContactno,corresAddress,corresCIty,corresState,corresPincode,pmntAddress,pmntCity,pmnatetState,pmntPincode) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 $stmt = $mysqli->prepare($query);
-$rc=$stmt->bind_param('sssssssssssssssssssssssssss',$roomno,$meja,$katil,$almari,$kerusi,$keytag,$stayfrom,$duration,$course,$regno,$fname,$lname,$gender,$contactno,$emailid,$emcntno,$gurname,$gurrelation,$gurcntno,$caddress,$ccity,$cstate,$cpincode,$paddress,$pcity,$pstate,$ppincode);
+$rc=$stmt->bind_param('sssssssssssssssssssssssssssss',$roomno,$blok,$aras,$meja,$katil,$almari,$kerusi,$keytag,$stayfrom,$duration,$course,$regno,$fname,$lname,$gender,$contactno,$emailid,$emcntno,$gurname,$gurrelation,$gurcntno,$caddress,$ccity,$cstate,$cpincode,$paddress,$pcity,$pstate,$ppincode);
 $stmt->execute();
 echo"<script>alert('Student Succssfully register');</script>";
 }
@@ -113,7 +118,7 @@ $uid=$_SESSION['login'];
 				$stmt->close();
 				if($rs)
 				{ ?>
-			<h3 style="color: red" align="center">Comfirmation section already Update</h3>
+			<h3 style="color: #86C232; font-weight: bold;" align="center"  id="blink">Comfirmation section already Update</h3>
 			<div align="center">
 				<div class="col-md-4">&nbsp;</div>
 			<div class="col-md-4">
@@ -187,35 +192,30 @@ $uid=$_SESSION['login'];
 </div>						
 <div class="form-group">
 <label class="col-sm-2 control-label">Table Reg.no</label>
-<div class="col-sm-4">
+<div class="col-sm-5">
 <input type="text" name="meja" id="meja" value="<?php echo $row->meja;?>"  class="form-control" readonly="true">
 </div>
 
-<div class="col-sm-4">
-<button class="btn btn-primary" >Comfirm</button><a href="https://websdk-label-demo.scandit.com/">Link to start scanner</a>
 
-
-
-</div>
 </div>
 
 <div class="form-group">
 <label class="col-sm-2 control-label">Wardrobe Reg.no</label>
-<div class="col-sm-8">
+<div class="col-sm-5">
 <input type="text" name="almari" id="almari" value="<?php echo $row->almari;?>" class="form-control" readonly="true">
 </div>
 </div>
 
 <div class="form-group">
 <label class="col-sm-2 control-label">Bed Reg.no</label>
-<div class="col-sm-8">
+<div class="col-sm-5">
 <input type="text" name="katil" id="katil"  value="<?php echo $row->katil;?>" class="form-control"  readonly="true">
 </div>
 </div>
 
 <div class="form-group">
 <label class="col-sm-2 control-label">Chair Reg.no</label>
-<div class="col-sm-8">
+<div class="col-sm-5">
 <input type="text" name="kerusi" id="kerusi"  value="<?php echo $row->kerusi;?>" class="form-control" readonly="true">
 </div>
 </div><?php } ?>
@@ -232,6 +232,9 @@ $aid=$_SESSION['id'];
 	  {
 	  	?>
 <input type="hidden" name="emailid" id="emailid" value="<?php echo $row->email;?>"  class="form-control"  hidden>
+<input type="text" name="fname" id="fname" value="<?php echo $row->firstName;?>"  class="form-control"  hidden>
+<input type="text" name="lname" id="lname" value="<?php echo $row->lastName;?>"  class="form-control"  hidden>
+<input type="text" name="contactno" id="contactno" value="<?php echo $row->contactNo;?>"  class="form-control"  hidden>
 
 <?php } ?>
 
@@ -315,5 +318,12 @@ $(document).ready(function() {
 
 })});
 
+</script>
 
+<script>
+	var blink = document.getElementById('blink');
+			setInterval(function() {
+				blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+			}, 750); 
+			</script>
 </html>

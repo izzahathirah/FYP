@@ -1,5 +1,5 @@
-<nav class="ts-sidebar">
-			<ul class="ts-sidebar-menu">
+<nav class="ts-sidebar " style=" background-color:#1F2605">
+			<ul class="ts-sidebar-menu"  style="margin-top:10%; background-color:#1F2605">
 			
 				<li class="ts-label">Main</li>
 				<?PHP if(isset($_SESSION['id']))
@@ -11,7 +11,7 @@
 <li><a href="my-profile.php"><i class="fa fa-user"></i> My Profile</a></li>
 <li><a href="change-password.php"><i class="fa fa-files-o"></i>Change Password</a></li>
 <li><a href="access-log.php"><i class="fa fa-file-o"></i>Access log</a></li>
-<li><a href="access-logkey.php"><i class="fa fa-file-o"></i>Access Log Door</a></li>
+<li><a href="access-logkey.php"><i class="fa fa-file-o"></i>Log Door History</a></li>
 <?php } else { ?>
 				
 				<li><a href="registration.php"><i class="fa fa-files-o"></i> User Registration</a></li>

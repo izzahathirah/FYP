@@ -46,10 +46,12 @@ FOLDER FYP
  
 OBJEKTIF YANG TELAH DICAPAI
 
-- To manage room facilities information 
+-To manage room facilities information 
 
 -To control room authorization
 
+-To alert users about unlock doors
+
 OBJEKTIF YANG BELUM DICAPAI
 
--To alert users about unlock doors
+-Tiada
